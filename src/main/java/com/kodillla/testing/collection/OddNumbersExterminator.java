@@ -12,8 +12,10 @@ public class OddNumbersExterminator {
                 evenList.add(item);
             }
         }
-        for(Integer a:evenList){
-            //System.out.println(a);
+        if(evenList.isEmpty()){
+           // evenList = null;
+            System.out.println("Your ArrayList is empty!");
+
         }
 
         return evenList;
