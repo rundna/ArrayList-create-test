@@ -28,44 +28,46 @@ public class CollectionTestSuite {
 
     @Test
     public void testOddNumbersExterminatorEmptyList() {
-        ListCreator newList = new ListCreator();
-        Integer size = 10 ;
-        Integer intNumbers = 10;
-        newList.CreateArrayList(size, intNumbers);
+        ArrayList<Integer> newList = new ArrayList<Integer>();
+        newList.add(10);
+        newList.add(11);
+        newList.add(12);
+        newList.add(13);
+        newList.add(14);
+        newList.add(15);
 
         OddNumbersExterminator newEvenList = new OddNumbersExterminator();
-        ArrayList<Integer> theList = newList.getList();
-        ArrayList<Integer> theEvenList = newEvenList.exterminate(theList);
+        ArrayList<Integer> theEvenList = newEvenList.exterminate(newList);
+        System.out.println("Fetched ArrayList. Continue testing...");
+        if(theEvenList.isEmpty()){
+        Assert.assertTrue(theEvenList.isEmpty());
+        System.out.println("Tested ArrayList is empty.");}
+        else{
+            Assert.assertFalse(theEvenList.isEmpty());
+            System.out.println("Tested ArrayList is not empty.");}
 
-        if (theEvenList.size() == 0) {
-            System.out.println("ArrayList is empty!");
-        } else {
-            System.out.println("Fetched ArrayList. Continue with testing...");
-        }
+
     }
 
     @Test
      public void testOddNumbersExterminatorNormalList(){
-        Integer checkItem = null;
-        ListCreator newList = new ListCreator();
-        Integer size = 10;
-        Integer intNumbers = 10;
-        newList.CreateArrayList(size, intNumbers);
+        ArrayList<Integer> newList = new ArrayList<Integer>();
+        newList.add(10);
+        newList.add(11);
+        newList.add(12);
+        newList.add(13);
+        newList.add(14);
+        newList.add(15);
+
+        ArrayList<Integer> checkList = new ArrayList<Integer>();
+        checkList.add(10);
+        checkList.add(12);
+        checkList.add(14);
 
         OddNumbersExterminator newEvenList = new OddNumbersExterminator();
-        ArrayList<Integer> theList = newList.getList();
-        ArrayList<Integer> theEvenList = newEvenList.exterminate(theList);
-        //theEvenList.add(13);
-        for(Integer item: theEvenList) {
-            checkItem = item % 2;
-            checkItem = checkItem + checkItem;
-            //System.out.println(item + " " + checkItem);
-        }
-           if(checkItem==0){
-                System.out.println("Congratulations. Your ArrayList contains only even numbers!");}
-                else{
-                System.out.println("Error. Your ArrayList contains odd numbers!");
-            }
+        ArrayList<Integer> theEvenList = newEvenList.exterminate(newList);
+        System.out.println("Checking list items...");
+        Assert.assertEquals(checkList,theEvenList);
 
         }
 }
