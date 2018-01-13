@@ -29,8 +29,8 @@ public class CollectionTestSuite {
     @Test
     public void testOddNumbersExterminatorEmptyList() {
         ListCreator newList = new ListCreator();
-        Integer size = 22;
-        Integer intNumbers = 44;
+        Integer size = 10 ;
+        Integer intNumbers = 10;
         newList.CreateArrayList(size, intNumbers);
 
         OddNumbersExterminator newEvenList = new OddNumbersExterminator();
