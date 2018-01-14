@@ -39,12 +39,8 @@ public class CollectionTestSuite {
         OddNumbersExterminator newEvenList = new OddNumbersExterminator();
         ArrayList<Integer> theEvenList = newEvenList.exterminate(newList);
         System.out.println("Fetched ArrayList. Continue testing...");
-        if(theEvenList.isEmpty()){
-        Assert.assertTrue(theEvenList.isEmpty());
-        System.out.println("Tested ArrayList is empty.");}
-        else{
-            Assert.assertFalse(theEvenList.isEmpty());
-            System.out.println("Tested ArrayList is not empty.");}
+        Assert.assertFalse(theEvenList.isEmpty());
+
 
 
     }
