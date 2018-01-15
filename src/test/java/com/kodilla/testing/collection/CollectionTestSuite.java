@@ -39,10 +39,7 @@ public class CollectionTestSuite {
         OddNumbersExterminator newEvenList = new OddNumbersExterminator();
         ArrayList<Integer> theEvenList = newEvenList.exterminate(newList);
         System.out.println("Fetched ArrayList. Continue testing...");
-        Assert.assertFalse(theEvenList.isEmpty());
-
-
-
+        Assert.assertNotEquals(0,theEvenList.size());
     }
 
     @Test
