@@ -29,17 +29,11 @@ public class CollectionTestSuite {
     @Test
     public void testOddNumbersExterminatorEmptyList() {
         ArrayList<Integer> newList = new ArrayList<Integer>();
-        newList.add(10);
-        newList.add(11);
-        newList.add(12);
-        newList.add(13);
-        newList.add(14);
-        newList.add(15);
 
         OddNumbersExterminator newEvenList = new OddNumbersExterminator();
         ArrayList<Integer> theEvenList = newEvenList.exterminate(newList);
         System.out.println("Fetched ArrayList. Continue testing...");
-        Assert.assertNotEquals(0,theEvenList.size());
+        Assert.assertEquals(0,theEvenList.size());
     }
 
     @Test
